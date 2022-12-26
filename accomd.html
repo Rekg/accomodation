@@ -4,7 +4,93 @@
         <meta charset="UTF-8">
         
         <title>Genet Hotel Reservation System</title>
-        <style>p.double {border-style: double;}</style>
+        <style>p.double {
+            
+            width: 300px;
+  height: 500px;  
+  padding: 50px;
+  border: 1px double red;
+  box-sizing: border-box;
+        }
+        body {
+       font-family: "Lato", sans-serif;
+        }
+        .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top:0px;
+  margin-bottom:0px;
+
+  
+  width: 50%;
+}
+
+
+
+        
+        
+        
+        </style>
     </head>
     <body>
     <a href= index.html>ACCOMODATION</a>
@@ -12,5 +98,32 @@
     <center>ROOMS ANDS SUITES</center>
     <p>Be spoilt for choice with 373 comfortably modern rooms and suites spread over seven different room types. Check out the extra modern amenities of our suites. There is even more reason to book an Executive Suite with a dedicated Lounge that offers stunning city skyline views. All rooms and suites offer a host of contemporary design features and essential comforts, including full Wi-Fi connectivity, that meet the needs of long- and short-stay guests at Ethiopian Skylight Hotel. </p>
 </body>
-<p class="double">For the ultimate luxury stay in Addis<br> Ababa, our magnificent Presidential <br>Suite spans 195 sq m. It features a <br>spacious living room, dining room, two <br>bedrooms, a guest bathroom and <br>panoramic views of the city’s spectacular airport and skyline through floor-to-ceiling windows. Natural daylight combined with the Suite’s ambient lighting creates a pleasant ambience in this city retreat where you can relax or socialize with friends and family.</p>
-    </html>
+<p class="double">For the ultimate luxury stay in Addis<br> Ababa, our magnificent Presidential <br>Suite spans 195 sq m. It features a <br>spacious living room, dining room, two <br>bedrooms, a guest bathroom and <br>panoramic views of the city’s <br>spectacular airport and skyline through floor-to-ceiling windows. Natural daylight <br>combined with the Suite’s ambient<br> lighting creates a pleasant ambience in<br> this city retreat where you can relax or <br>socialize with friends and family.</p>
+    
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">PRICE</a>
+  </div>
+
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ BOOK NOW</button>  
+  <h2>-</h2>
+  <p>-</p>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<img src="https://www.ethiopianskylighthotel.com/images/default-source/page's-content-library/rooms-and-suites/presedential-suite-1050-x-788b6cabfc2-8962-4bd8-9c87-a4865a273b51.jpg?sfvrsn=b553dbb3_1" alt="Paris" class="center">
+
+</html>
